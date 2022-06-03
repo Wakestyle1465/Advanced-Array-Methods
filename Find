@@ -1,0 +1,13 @@
+function findUserByUsername (arr,username){
+    return arr.find(function(user){
+        return user.username === username
+    })
+}
+
+function removeUser (arr,username){
+    let removed =  arr.find(function(user){
+        user.username === username  
+    })
+    if(removed === -1) return
+    return arr.splice(removed,1)[0]
+}
